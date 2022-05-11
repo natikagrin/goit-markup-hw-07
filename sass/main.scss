@@ -1,3 +1,8 @@
-body{
-    background-color: red;
-}
+@import "./utils/vars";
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/feature";
+@import "./layout/about";
+@import "./layout/team";
+@import "./layout/client";
+@import "./base/reset";

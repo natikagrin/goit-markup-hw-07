@@ -1,4 +1,4 @@
- /*header*/
+ 
  header {
      border-bottom: 1px solid;
      color: #ECECEC;
@@ -31,7 +31,15 @@
      letter-spacing: 0.03em;
      color: #2196F3;
  }
+ .colortext {
+     color: black;
+     /* чорний  колір лого */
+ }
 
+ .colorchange {
+     color: #FFFFFF;
+     /*білий колір лого*/
+ }
  .menu-list__item:not(:last-child) {
      margin-right: 50px;
  }
@@ -54,7 +62,9 @@
      position: relative;
      display: block;
  }
-
+  .menu-list__link.current {
+      color: var(--accsent-color);
+  }
  .menu-list__link.current::after {
      content: "";
      left: 0;
@@ -66,7 +76,9 @@
      background-color: var(--accsent-color);
      border-radius: 2px;
  }
-
+ .nav-list.link.current {
+     color: var(--accsent-color);
+ }
  .header__connect {
      margin-left: auto;
  }
@@ -103,3 +115,4 @@
      margin-right: 10px;
      fill: currentColor
  }
+ 

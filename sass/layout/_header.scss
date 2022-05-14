@@ -45,22 +45,18 @@
  }
 
  .menu-list__link {
+    position: relative;
+     display: block;
      font-weight: 500;
      font-size: 14px;
      line-height: 1.14;
      letter-spacing: 0.02em;
      color: #212121;
      transition: color 250ms linear;
- }
-
- .menu-list__link:hover,
- .menu-list__link:focus {
+    &:hover,
+    &:focus {
      color: #2196F3;
- }
-
- .menu-list__link {
-     position: relative;
-     display: block;
+        }
  }
   .menu-list__link.current {
       color: var(--accsent-color);

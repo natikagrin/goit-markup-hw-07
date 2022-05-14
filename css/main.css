@@ -153,6 +153,8 @@ header {
 }
 
 .menu-list__link {
+  position: relative;
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -160,15 +162,8 @@ header {
   color: #212121;
   transition: color 250ms linear;
 }
-
-.menu-list__link:hover,
-.menu-list__link:focus {
+.menu-list__link:hover, .menu-list__link:focus {
   color: #2196F3;
-}
-
-.menu-list__link {
-  position: relative;
-  display: block;
 }
 
 .menu-list__link.current {
@@ -293,7 +288,6 @@ header {
 .feature-list__item {
   width: 270px;
 }
-
 .feature-list__item:not(:last-child) {
   margin-right: 30px;
 }
@@ -513,15 +507,12 @@ margin-right: 30px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .client-list__link:hover {
   border-color: var(--accsent-color);
 }
-
 .client-list__link:focus {
   border-color: var(--accsent-color);
 }
-
 .client-list__link {
   background-color: #FFFFFF;
 }
@@ -779,19 +770,15 @@ address {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-
 .modal-close-btn:hover .modal-close-icon {
   fill: #2196F3;
 }
-
 .modal-close-btn:hover {
   fill: #2196F3;
 }
-
 .modal-close-btn:focus .modal-close-icon {
   color: #2196F3;
 }
-
 .modal-close-btn:focus {
   color: #2196F3;
 }
@@ -823,9 +810,20 @@ input.modal-input {
   /*відключає підсвічування форми щоб задати ховер та фокус*/
   transition: border-color 300ms;
 }
-
-.modal-input::placeholder {
+input.modal-input::placeholder {
   color: var(--accsent-color);
+}
+input.modal-input:hover {
+  border-color: #2196F3;
+}
+input.modal-input:focus {
+  border-color: #2196F3;
+}
+input.modal-input:hover + .form-icon {
+  fill: #2196F3;
+}
+input.modal-input:focus + .form-icon {
+  fill: #2196F3;
 }
 
 /*.modal-input:valid{
@@ -850,22 +848,6 @@ input.modal-input {
   transform: translateY(-50%);
   left: 10px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-input:hover {
-  border-color: #2196F3;
-}
-
-.modal-input:focus {
-  border-color: #2196F3;
-}
-
-.modal-input:hover + .form-icon {
-  fill: #2196F3;
-}
-
-.modal-input:focus + .form-icon {
-  fill: #2196F3;
 }
 
 .modal-label {
@@ -900,10 +882,6 @@ input.modal-input {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-text:hover {
-  border-color: var(--accsent-color);
-}
-
 .modal-text {
   width: 100%;
   height: 120px;
@@ -913,9 +891,10 @@ input.modal-input {
   padding: 12px 16px;
   resize: none;
 }
-
-.modal-text::placeholder,
-.modal-text:focus-visible {
+.modal-text:hover {
+  border-color: var(--accsent-color);
+}
+.modal-text::placeholder, .modal-text:focus-visible {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.7;
@@ -968,20 +947,6 @@ input.modal-input {
   fill: var(--hero-title-color);
 }
 
-/*Приховати галочку інпут*/
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .input-check:focus + .check-text span {
   border-color: var(--accsent-color);
 }
@@ -996,8 +961,7 @@ input.modal-input {
      border-radius: 2px;
  }
 .check-text{
-    display: flex;
-    align-items: center;
+@extend %aligh-list;
   font-family: Roboto,sans-serif;
  font-weight: 400;
  font-size: 14px;
@@ -1041,9 +1005,7 @@ input.modal-input {
 .portfolio-item {
   margin-left: 8px;
 }
-
-.portfolio-item:hover,
-.portfolio-item:focus {
+.portfolio-item:hover, .portfolio-item:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
@@ -1110,11 +1072,6 @@ input.modal-input {
  margin-left: 30px;
  margin-bottom: 30px;
 }*/
-.galery-item:hover,
-.galery-item:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 .foto-bottom {
   border: 1px solid #EEEEEE;
   padding: 20px 24px;
@@ -1129,4 +1086,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 }*/
 .galery-item {
   display: block;
+}
+.galery-item:hover, .galery-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }/*# sourceMappingURL=main.css.map */

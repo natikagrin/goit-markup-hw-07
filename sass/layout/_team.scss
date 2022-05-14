@@ -83,26 +83,23 @@
      transition-property: background-color;
      transition-duration: 250ms;
      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+    background-color: var(--accsent-color);
+            /*fill: #2196F3;*/}
+    &:hover .team-soc__icon {
+     fill: #FFFFFF;
+        }
+     &:focus {
+    background-color: var(--accsent-color);
+     /*fill: #2196F3;*/
+        }
+     &:focus .team-soc__icon {
+     fill: #FFFFFF;
+        }
  }
 
  .team-soc__icon {
      fill: #AFB1B8;
  }
 
- .team-soc__link:hover {
-     background-color: var(--accsent-color);
-     /*fill: #2196F3;*/
- }
-
- .team-soc__link:hover .team-soc__icon {
-     fill: #FFFFFF;
- }
-
- .team-soc__link:focus {
-     background-color: var(--accsent-color);
-     /*fill: #2196F3;*/
- }
-
- .team-soc__link:focus .team-soc__icon {
-     fill: #FFFFFF;
- }
+ 
